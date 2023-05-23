@@ -1,19 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
-// Basic1というReactの関数コンポーネント
-// propsは親コンポーネントから子コンポーネントへデータを渡すためのもの
 const Basic1 = (props) => {
-  // clickHandlerという名前の関数を定義
+  // この関数は使わなくなった
   const clickHandler = () => {
     console.log('clicked')
   }
+// useStateの使用
+// count：状態変数, setCount：更新関数
+  const [count, setCount] = useState(0)
 
-  // 表示内容をreturn
-  // 表示する内容には、<button>要素と2つの<h1>要素が含まれる
   return (
     <>
-      <button onClick={clickHandler}>click</button>
+    {/* useStateフックから取得したsetCount関数を使用して、現在のカウント（count）に1を加えることで、カウントの新しい状態を設定 */}
+      <button onClick={() => setCount(count+1)}>Count {count}</button>
+
       <h1>Hello { props.name }</h1>
       <h1>Hello React</h1> 
     </>
