@@ -9,7 +9,7 @@ const Basic1 = () => {
     <>
       {/* HTML の h1 タグに相当する JSX 要素です。ここでは "Hello React" というテキストを表示します */}
       <h1>Hello React</h1>
-      <h1>Hello React</h1> 同
+      <h1>Hello React</h1> 
     </>
   )
 }
